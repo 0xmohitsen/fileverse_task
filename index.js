@@ -1,5 +1,4 @@
 const Xray = require("x-ray"); // Imported Xray package
-
 const fs = require("fs"); // Imported file system ( fs ) package
 const argv = require("yargs").argv; // Imported yargs to specify url via CLI
 
@@ -7,12 +6,13 @@ const xray = new Xray(); // Created x-ray object and stored in xray variable
 
 const url = argv.url || ""; // Get url from CLI argument
 
-// Check whether url is given or not
+// Check whether url is provided or not
 if (!url) {
-  console.error("Please specify a URL");
+  console.error("Please specify a URL \nFormat: node index.js --url=<URL>");
   process.exit(1);
 }
 
+// Scrape anchor tags and extract titles and href attributes
 xray(url, "a", [
   {
     Title: "", // Extract the text content of the anchor tag
