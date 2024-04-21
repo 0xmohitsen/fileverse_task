@@ -11,8 +11,10 @@ if (!url) {
   process.exit(1);
 }
 
+const target = "a";
+
 // Scrape anchor tags and extract titles and href attributes
-xray(url, "a", [
+xray(url, target, [
   {
     Title: "", // Extract the text content of the anchor tag
     Links: "@href", // Extract the href attribute of the anchor tag
