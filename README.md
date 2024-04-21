@@ -49,11 +49,11 @@ Before using this script, ensure you have the following prerequisites installed:
 ```bash
 node index.js --url=<URL>
 ```
-- Replace <URL> with the URL of the webpage you want to scrape.
 
 ## Example
 
-- example of how to use the script with a specific URL:
+- Example of how to use the script with a specific URL.
+- Replace <URL> with the URL of the webpage you want to scrape.
 
 ```bash
 node index.js --url=https://example.com
