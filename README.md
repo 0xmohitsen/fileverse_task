@@ -28,3 +28,13 @@ To install the required dependencies, run the following command in your terminal
 
 ```bash
 npm install
+```
+
+## Usage
+
+- To use the script, run the following command in your terminal:
+
+```bash
+node index.js --url=<URL>
+```
+-Replace <URL> with the URL of the webpage you want to scrape.
