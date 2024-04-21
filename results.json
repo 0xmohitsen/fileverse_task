@@ -1,0 +1,26 @@
+[
+  {
+    "Title": "My Portals",
+    "Links": "https://portal.fileverse.io/#/contracts"
+  },
+  {
+    "Title": "FAQ",
+    "Links": "https://portal.fileverse.io/#/manifesto"
+  },
+  {
+    "Title": "Portal",
+    "Links": "https://fileverse.io/portal"
+  },
+  {
+    "Title": "Fileverse Solo",
+    "Links": "https://beta.fileverse.io/"
+  },
+  {
+    "Title": "Features",
+    "Links": "https://fileverse.io/features"
+  },
+  {
+    "Title": "HeartBit SDK",
+    "Links": "https://fileverse.io/heartbit"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "name": "fileverse-project",
+  "version": "1.0.0",
+  "description": "Webpage parsing using x-ray package",
+  "main": "index.js",
+  "scripts": {
+    "start": ""
+  },
+  "author": "Mohit",
+  "license": "ISC",
+  "dependencies": {
+    "x-ray": "^2.3.4",
+    "yargs": "^17.7.2"
+  }
+}
