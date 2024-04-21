@@ -1,7 +1,5 @@
-const Xray = require("x-ray"); // Imported Xray package
 const fs = require("fs"); // Imported file system ( fs ) package
-
-const xray = new Xray(); // Created x-ray object and stored in xray variable
+const scrape = require("./scraper"); // Imported scrape module
 
 const url = process.argv[2] || ""; // Get url from CLI argument
 
@@ -11,37 +9,24 @@ if (!url) {
   process.exit(1);
 }
 
-const target = "a";
-
-// Scrape anchor tags and extract titles and href attributes
-xray(url, target, [
-  {
-    Title: "", // Extract the text content of the anchor tag
-    Links: "@href", // Extract the href attribute of the anchor tag
-  },
-])(function (err, links) {
-  if (err) {
-    console.error("Error:", err);
-    return;
-  }
-
-  // Remove duplicates
-  const uniqueLinks = links.filter(
-    (link, index, self) =>
-      index ===
-      self.findIndex((l) => l.Title === link.Title && l.Href === link.Href)
-  );
-
-  // Write the results to a JSON file
-  fs.writeFile(
-    "results.json",
-    JSON.stringify(uniqueLinks, null, 2),
-    function (err) {
+// Call the scraper function 
+scrape(url)
+  .then((links) => {
+    // Process the scraped data
+    const uniqueLinks = links.filter(
+        (link, index, self) =>
+          index ===
+          self.findIndex((l) => l.Title === link.Title && l.Href === link.Href)
+      );
+    // Write the results to a JSON file
+    fs.writeFile("results.json", JSON.stringify(uniqueLinks, null, 2), (err) => {
       if (err) {
-        console.error("Error writing to file:", err);
-        return;
+        console.error("Error writing to file: ", err);
+      } else {
+        console.log("Scraping completed. Results saved to results.json");
       }
-      console.log("Scraping completed. Results saved to results.json");
-    }
-  );
-});
+    });
+  })
+  .catch((err) => {
+    console.error("Error: ", err);
+  });
