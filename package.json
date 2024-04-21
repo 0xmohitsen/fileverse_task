@@ -9,7 +9,6 @@
   "author": "Mohit",
   "license": "ISC",
   "dependencies": {
-    "x-ray": "^2.3.4",
-    "yargs": "^17.7.2"
+    "x-ray": "^2.3.4"
   }
 }

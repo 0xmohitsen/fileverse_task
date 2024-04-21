@@ -1,14 +1,13 @@
 const Xray = require("x-ray"); // Imported Xray package
 const fs = require("fs"); // Imported file system ( fs ) package
-const argv = require("yargs").argv; // Imported yargs to specify url via CLI
 
 const xray = new Xray(); // Created x-ray object and stored in xray variable
 
-const url = argv.url || ""; // Get url from CLI argument
+const url = process.argv[2] || ""; // Get url from CLI argument
 
 // Check whether url is provided or not
 if (!url) {
-  console.error("Please specify a URL \nFormat: node index.js --url=<URL>");
+  console.error("Please specify a URL \nFormat: node index.js <URL>");
   process.exit(1);
 }
 
