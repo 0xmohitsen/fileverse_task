@@ -47,7 +47,7 @@ Before using this script, ensure you have the following prerequisites installed:
 - To use the script, run the following command in your terminal:
 
 ```bash
-node index.js --url=<URL>
+node index.js <URL>
 ```
 
 ## Example
@@ -56,5 +56,5 @@ node index.js --url=<URL>
 - Replace <URL> with the URL of the webpage you want to scrape.
 
 ```bash
-node index.js --url=https://example.com
+node index.js https://example.com
 ```
