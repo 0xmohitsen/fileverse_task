@@ -8,8 +8,7 @@ This Node.js script scrapes anchor tags (links) from a webpage and extracts thei
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Options](#options)
-- [License](#license)
+- [Example](#example)
 
 ## Introduction
 
@@ -38,3 +37,11 @@ npm install
 node index.js --url=<URL>
 ```
 -Replace <URL> with the URL of the webpage you want to scrape.
+
+## Example
+
+- example of how to use the script with a specific URL:
+
+```bash
+node index.js --url=https://example.com
+```
