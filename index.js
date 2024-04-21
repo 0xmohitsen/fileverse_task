@@ -1,7 +1,12 @@
-const fs = require("fs"); // Imported file system ( fs ) package
-const scrape = require("./scraper"); // Imported scrape module
+ // Imported file system ( fs ) package
+const fs = require("fs");
 
-const url = process.argv[2] || ""; // Get url from CLI argument
+// Imported scrape module
+const scrape = require("./scraper"); 
+
+// Get url from CLI argument
+const index = 2;
+const url = process.argv[index]; 
 
 // Check whether url is provided or not
 if (!url) {
@@ -12,7 +17,7 @@ if (!url) {
 // Call the scraper function 
 scrape(url)
   .then((links) => {
-    // Process the scraped data
+    // Remove duplicates
     const uniqueLinks = links.filter(
         (link, index, self) =>
           index ===
