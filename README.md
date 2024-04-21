@@ -23,11 +23,24 @@ Before using this script, ensure you have the following prerequisites installed:
 
 ## Installation
 
-To install the required dependencies, run the following command in your terminal:
+1. **Fork and Clone the Repository**
 
-```bash
-npm install
-```
+   ```bash
+   git clone https://github.com/Mohitsen11/fileverse_task.git
+   ```
+
+2. **Navigate to the Directory**
+
+   ```bash
+   cd fileverse_task
+   ```
+
+3. **Install Required Dependencies**
+
+   ```bash
+   npm i
+   ```
+
 
 ## Usage
 
