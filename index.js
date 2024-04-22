@@ -16,9 +16,6 @@ if (!url) {
 
 // Call the scraper function 
 const response = scrape(url);
-
-console.log(response);
-
 response.then((links) => {
     // Remove duplicates
     const uniqueLinks = links.filter(
